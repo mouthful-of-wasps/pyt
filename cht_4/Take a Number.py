@@ -1,7 +1,4 @@
 #ecoo13r1p1
-
-#start_no = int(input())
-
 actions = {'TAKE':0,'SERVE':0,'no':int(input())}
 
 

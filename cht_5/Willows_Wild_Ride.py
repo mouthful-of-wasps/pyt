@@ -1,38 +1,38 @@
     #ecoo18r1p1
 for i in range(10):
-    boxe_dage = input()
+    box_days = input()
 
-    boxe_dage = boxe_dage.split()
+    box_days = box_days.split()
 
-    for i in range(len(boxe_dage)):
-        boxe_dage[i] = int(boxe_dage[i])
+    for i in range(len(box_days)):
+        box_days[i] = int(box_days[i])
 
 
     boxes = 0
-    dage_brugt = 0
+    days_gone = 0
 
-    for i in range(boxe_dage[1]):
-        i_dag = input()
+    for i in range(box_days[1]):
+        today = input()
 
-        if i_dag == 'E':
+        if today == 'E':
             if boxes>0:
-                dage_brugt += 1
-                if dage_brugt == boxe_dage[0]:
+                days_gone += 1
+                if days_gone == box_days[0]:
                     boxes -= 1
-                    dage_brugt = 0
+                    days_gone = 0
         else:
             boxes += 1
-            dage_brugt += 1
-            if dage_brugt == boxe_dage[0]:
+            days_gone += 1
+            if days_gone == box_days[0]:
                     boxes -= 1
-                    dage_brugt = 0
+                    days_gone = 0
         
                     
                     
                     
                     
-    resterende_dage = ((boxes-1) * boxe_dage[0]) + (boxe_dage[0] - dage_brugt)
+    days_left = ((boxes-1) * box_days[0]) + (box_days[0] - days_gone)
 
-    print(resterende_dage)
+    print(days_left)
 
 

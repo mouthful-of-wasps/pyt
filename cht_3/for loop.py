@@ -1,10 +1,10 @@
-streng = input()
+the_string = input()
 
 
 ball_place = '1'
 
 
-for move in streng:
+for move in the_string:
     if move + ball_place == 'A1':
         ball_place = '2'
     elif move + ball_place == 'A2':

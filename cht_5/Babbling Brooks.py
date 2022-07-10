@@ -8,22 +8,22 @@ for i in range(nos_streams):
     streams.append(float(input()))
 
 
-a=0
+input_no=0
 
-while a != 77:
-    a=int(input())
+while input_no != 77:
+    input_no=int(input())
 
-    if a == 99:
-       a = int(input()) 
+    if input_no == 99:
+       input_no = int(input()) 
        part = float(input())
-       streams.insert(int(a),(float(streams[a-1])*part/100.0))
-       streams[a-1] = streams[a-1] * (1-(part/100.0)) 
-       a = 0
-    if a == 88:
-        a = int(input())
-        streams[a]=(float(streams[a]) + float(streams[a-1]))
-        del streams[a-1]
-        a=0
+       streams.insert(int(input_no),(float(streams[input_no-1])*part/100.0))
+       streams[input_no-1] = streams[input_no-1] * (1-(part/100.0)) 
+       input_no = 0
+    if input_no == 88:
+        input_no = int(input())
+        streams[input_no]=(float(streams[input_no]) + float(streams[input_no-1]))
+        del streams[input_no-1]
+        input_no=0
     
 
 

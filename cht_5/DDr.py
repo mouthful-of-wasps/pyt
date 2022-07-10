@@ -10,7 +10,7 @@ for i in range(no_of_combos):
     combos.append(input().split())
 
 
-combos = sorted(combos, key=lambda x: len(x[0]), reverse=True)
+#combos = sorted(combos, key=lambda x: len(x[0]), reverse=True)
 points = len(moves)
 
 

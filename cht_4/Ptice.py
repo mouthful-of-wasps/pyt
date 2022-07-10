@@ -11,13 +11,13 @@ ppl = {'Adrian':0, 'Bruno':0, 'Goran': 0}
 
 while i < nos:
     index = (i)%12
-    svar = answers[i]
+    the_current_answer = answers[i]
 
-    if a[index] == svar:
+    if a[index] == the_current_answer:
         ppl['Adrian'] +=1
-    if b[index] == svar:
+    if b[index] == the_current_answer:
         ppl['Bruno'] +=1
-    if g[index] == svar:
+    if g[index] == the_current_answer:
         ppl['Goran'] +=1
      
     

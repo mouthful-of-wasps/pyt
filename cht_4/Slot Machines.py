@@ -5,14 +5,6 @@ third = int(input())
 pulls = 0
 machine = 0
 
-
-#if first == 35:
-#    first =1
-#if second ==100:
-#    second =1
-#if third ==10:
-#    third=1
-
 while quarters > 0:
     
     if machine%3==0:

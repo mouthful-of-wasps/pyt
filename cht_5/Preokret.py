@@ -19,29 +19,29 @@ current = 0
 a_score = 0
 b_score = 0
 
-tidligere_stilling = 'a' if a[0] < b[0] else "b"
+previous_score = 'a' if a[0] < b[0] else "b"
 
-if tidligere_stilling == 'a':
+if previous_score == 'a':
     a_score += 1
     del a[0]
 else:
     b_score +=1
     del b[0]
 
-def hvem_ahead(a_score,b_score, current_,tidligere_stilling_):
-    global tidligere_stilling
+def who_is_ahead(a_score,b_score, current_,score_before_last_change):
+    global previous_score
     global current
-    tidligere_stilling = tidligere_stilling_
+    previous_score = score_before_last_change
     current = current_
     if a_score > b_score:
-        if tidligere_stilling == 'b':
+        if previous_score == 'b':
             current+=1
-            tidligere_stilling = 'a'
+            previous_score = 'a'
             return
     elif a_score < b_score:
-        if tidligere_stilling == 'a':
+        if previous_score == 'a':
             current+=1
-            tidligere_stilling = 'b'
+            previous_score = 'b'
             return
     else:
         return
@@ -59,20 +59,20 @@ while len(a) > 0 and len(b) > 0:
     else:
         b_score +=1
         del b[0]
-    hvem_ahead(a_score,b_score,current,tidligere_stilling)
+    who_is_ahead(a_score,b_score,current,previous_score)
     
 
 while len(a) > 0:
      #   print(f'a , a:{a_score} - b {b_score}')
         a_score += 1
-        hvem_ahead(a_score,b_score,current,tidligere_stilling)
+        who_is_ahead(a_score,b_score,current,previous_score)
         del a[0]
         
 
 while len(b) > 0:
       #  print(f'b , a:{a_score} - b {b_score}')
         b_score += 1
-        hvem_ahead(a_score,b_score,current,tidligere_stilling)
+        who_is_ahead(a_score,b_score,current,previous_score)
         del b[0]
 
 

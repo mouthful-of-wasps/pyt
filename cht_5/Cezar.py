@@ -7,15 +7,15 @@ the_draw = [0,0,0,0,0,0,0,0,0,0,0,0]
 
 cards_drawn = int(input())
 
-xx = 21
+max_allowed = 21
 for i in range(cards_drawn):
     card = int(input())
     cards[card] -= 1
-    xx -= card
+    max_allowed -= card
 
-xx = xx+1
+max_allowed = max_allowed+1
 
-if sum(cards[:xx])>sum(cards[xx:]):
+if sum(cards[:max_allowed])>sum(cards[max_allowed:]):
     print('VUCI')
 else:
     print('DOSTA')
