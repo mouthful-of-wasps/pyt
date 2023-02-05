@@ -5,8 +5,8 @@
 
 def distinct(year):
      
-    if year > 9876:
-        return f'There are no more years with distinct numbers'
+    if year > 9875:
+        return 10234
     
     year += 1
     my_set = len(set(str(year)))
@@ -19,4 +19,4 @@ def distinct(year):
     return distinct(year)
 
 
-print(distinct(int(input('Write a year between 0 and 10000, to see the next year with distinct numbers!'))))
+print(distinct(int(input())))
